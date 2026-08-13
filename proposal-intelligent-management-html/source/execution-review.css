@@ -1,0 +1,149 @@
+Exit code: 0
+Wall time: 0.3 seconds
+Output:
+/* 鑺傜偣楠岃瘉瀹℃牳锛氭部鐢ㄤ笟鍔¤鎯呯殑绾靛悜闃呰閫昏緫锛屼繚鐣欐竻鏅扮殑璧勬枡鏍搁獙鍖恒€?*/
+.execution-review-modal {
+  height: min(91vh, 900px) !important;
+  max-height: 91vh !important;
+}
+
+.execution-review-modal .execution-review-scroll {
+  display: block !important;
+  overflow: auto !important;
+  padding: 16px 20px 24px !important;
+  overscroll-behavior: contain;
+}
+
+/* 椹冲洖璁板綍鎭㈠涓虹嫭绔嬨€佸畬鏁寸殑鍘嗗彶妯″潡銆?*/
+.execution-review-modal .revision-top {
+  margin: 0 0 13px !important;
+}
+
+.execution-review-modal .revision-top > header {
+  padding: 12px 14px !important;
+  border-bottom: 1px solid #edf0f5 !important;
+}
+
+.execution-review-modal .revision-top > div {
+  display: block;
+  padding: 13px 15px !important;
+}
+
+.execution-review-modal .revision-top label {
+  display: block;
+  margin-top: 10px;
+}
+
+.execution-review-modal .revision-top p {
+  margin: 4px 0 0;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+.execution-review-modal .execution-meta-grid {
+  display: block !important;
+  margin: 0 !important;
+}
+
+/* 闄勪欢鍜岄棶绛斾繚鎸佺浉閭伙紝鎷栨嫿璺濈鐭紱鎬荤粨鐙珛鎺掑埌椤甸潰搴曢儴銆?*/
+.execution-review-modal .execution-workspace {
+  display: grid !important;
+  grid-template-columns: 270px minmax(0, 1fr) !important;
+  gap: 13px !important;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 13px 0 0 !important;
+}
+
+.execution-review-modal .execution-workspace .evidence-dock,
+.execution-review-modal .execution-workspace .review-chatbot {
+  min-height: 355px !important;
+  height: 355px !important;
+}
+
+.execution-review-modal .execution-workspace .conversation-summary {
+  grid-column: 1 / -1;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  border-color: #edf0f5 !important;
+  background: transparent !important;
+}
+
+.execution-review-modal .evidence-dock {
+  display: flex;
+  flex-direction: column;
+}
+
+.execution-review-modal .evidence-file-list {
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+.execution-review-modal .evidence-drop {
+  flex: 0 0 auto;
+  margin-top: auto;
+}
+
+.execution-review-modal .review-chatbot {
+  display: flex;
+  flex-direction: column;
+}
+
+.execution-review-modal .chat-messages {
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+.execution-review-modal .conversation-summary textarea {
+  min-height: 58px !important;
+  height: 58px !important;
+  width: calc(100% - 28px) !important;
+  margin: 6px 14px 9px !important;
+  resize: none;
+  border-color: #e8ebf1 !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
+
+.execution-review-modal .conversation-summary > header {
+  min-height: 45px;
+  padding: 8px 14px;
+  align-items: center;
+}
+
+.execution-review-modal .conversation-summary > header p {
+  display: none;
+}
+
+.execution-review-modal .conversation-summary > header h3 {
+  font-size: 14px !important;
+}
+
+.execution-review-modal .conversation-summary > header .plain {
+  min-width: 72px !important;
+  height: 28px !important;
+  padding: 0 8px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 auto !important;
+  flex-direction: row !important;
+  gap: 4px !important;
+  white-space: nowrap !important;
+  writing-mode: horizontal-tb !important;
+  line-height: 1 !important;
+  font-size: 11px !important;
+}
+
+@media (max-height: 780px) {
+  .execution-review-modal .execution-workspace .evidence-dock,
+  .execution-review-modal .execution-workspace .review-chatbot {
+    min-height: 310px !important;
+    height: 310px !important;
+  }
+}
+
