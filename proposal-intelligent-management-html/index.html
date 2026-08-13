@@ -7,6 +7,7 @@
   <style>
     html, body, #root { width: 100%; min-height: 100%; margin: 0; }
     body { background: #f5f7fd; font-family: "Microsoft YaHei", Arial, sans-serif; }
+    .startup-error { padding: 32px; color: #b42318; }
   </style>
 </head>
 <body>
@@ -15,19 +16,31 @@
   <script src="./assets/react-dom.production.min.js"></script>
   <script src="./assets/export-html-bootstrap.js"></script>
   <script>
-    (function () {
-      var script = document.createElement("script");
-      script.src = "./index.js";
-      script.onload = function () {
+    (async function () {
+      var root = document.getElementById("root");
+      var parts = [
+        "./assets/app-runtime-01.js", "./assets/app-runtime-02.js",
+        "./assets/app-runtime-03.js", "./assets/app-runtime-04.js",
+        "./assets/app-runtime-05.js", "./assets/app-runtime-06.js",
+        "./assets/app-runtime-07.js", "./assets/app-runtime-08.js"
+      ];
+      try {
+        var scripts = await Promise.all(parts.map(function (url) {
+          return fetch(url).then(function (response) {
+            if (!response.ok) throw new Error(url + " 加载失败（" + response.status + "）");
+            return response.text();
+          });
+        }));
+        (0, eval)(scripts.join(""));
         if (!window.UserComponent || !window.HtmlTemplateBootstrap) {
-          throw new Error("导出资源加载失败");
+          throw new Error("应用组件初始化失败");
         }
         window.HtmlTemplateBootstrap.renderComponent(window.UserComponent);
-      };
-      script.onerror = function () {
-        document.getElementById("root").textContent = "应用脚本加载失败，请检查导出文件是否完整。";
-      };
-      document.body.appendChild(script);
+      } catch (error) {
+        console.error(error);
+        root.className = "startup-error";
+        root.textContent = "应用加载失败：" + error.message;
+      }
     }());
   </script>
 </body>
