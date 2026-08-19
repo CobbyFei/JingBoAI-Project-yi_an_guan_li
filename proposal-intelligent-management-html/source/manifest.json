@@ -1,12 +1,9 @@
 {
-  "version": 2,
-  "format": "axhub-html-with-source",
-  "entry": "index.html",
-  "sourceRoot": "source",
   "files": [
-    { "path": "index.tsx", "kind": "entry" },
-    { "path": "proposal.css", "kind": "style" },
-    { "path": "execution-review.css", "kind": "style" },
-    { "path": "useHashPage.ts", "kind": "shared-dependency" }
-  ]
+    "index.tsx",
+    "proposal.css",
+    "execution-review.css",
+    "useHashPage.ts"
+  ],
+  "updatedAt": "2026-08-19T05:52:16.630Z"
 }
