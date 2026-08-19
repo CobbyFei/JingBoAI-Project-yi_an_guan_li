@@ -1,7 +1,4 @@
-Exit code: 0
-Wall time: 0.3 seconds
-Output:
-/* 鑺傜偣楠岃瘉瀹℃牳锛氭部鐢ㄤ笟鍔¤鎯呯殑绾靛悜闃呰閫昏緫锛屼繚鐣欐竻鏅扮殑璧勬枡鏍搁獙鍖恒€?*/
+/* 节点验证审核：沿用业务详情的纵向阅读逻辑，保留清晰的资料核验区。 */
 .execution-review-modal {
   height: min(91vh, 900px) !important;
   max-height: 91vh !important;
@@ -14,7 +11,7 @@ Output:
   overscroll-behavior: contain;
 }
 
-/* 椹冲洖璁板綍鎭㈠涓虹嫭绔嬨€佸畬鏁寸殑鍘嗗彶妯″潡銆?*/
+/* 驳回记录恢复为独立、完整的历史模块。 */
 .execution-review-modal .revision-top {
   margin: 0 0 13px !important;
 }
@@ -46,7 +43,7 @@ Output:
   margin: 0 !important;
 }
 
-/* 闄勪欢鍜岄棶绛斾繚鎸佺浉閭伙紝鎷栨嫿璺濈鐭紱鎬荤粨鐙珛鎺掑埌椤甸潰搴曢儴銆?*/
+/* 附件和问答保持相邻，拖拽距离短；总结独立排到页面底部。 */
 .execution-review-modal .execution-workspace {
   display: grid !important;
   grid-template-columns: 270px minmax(0, 1fr) !important;
@@ -146,4 +143,3 @@ Output:
     height: 310px !important;
   }
 }
-
