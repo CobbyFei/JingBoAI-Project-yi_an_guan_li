@@ -1,13 +1,13 @@
-Exit code: 0
-Wall time: 0.2 seconds
-Output:
 /**
- * 澶氶〉闈㈠師鍨嬬殑杞婚噺 hash 璺敱 hook銆? *
- * URL 鏍煎紡: #page=<pageId>
- * pageId 浠呭厑璁稿皬鍐欏瓧姣嶃€佹暟瀛椼€佽繛瀛楃锛坅-z 0-9 -锛夈€? *
- * 鐢ㄦ硶锛? *   const { page, setPage } = useHashPage('home');
+ * 多页面原型的轻量 hash 路由 hook。
+ *
+ * URL 格式: #page=<pageId>
+ * pageId 仅允许小写字母、数字、连字符（a-z 0-9 -）。
+ *
+ * 用法：
+ *   const { page, setPage } = useHashPage('home');
  *   const route = defineHashPageRoute([
- *     { id: 'dashboard', title: '宸ヤ綔鍙? },
+ *     { id: 'dashboard', title: '工作台' },
  *   ], { defaultPageId: 'dashboard' });
  *   const { page, setPage, pages } = useHashPage(route);
  */
@@ -153,4 +153,3 @@ export function useHashPage(routeOrDefault: HashPageRoute | string = 'home') {
 
     return { page, setPage, pages, defaultPageId };
 }
-
